@@ -1,0 +1,74 @@
+<div class="PatientsEditScreen"  data-state='patients-editor'>
+    <div class="row">
+        <h1 class='editor-title col-md-8'>New Patient</h1>
+    </div>
+    <hr class='bordered-Top'/>
+    <div class="alert alert-warning hided-section" role="alert"></div>
+    <form id='form'>
+      <div class="form-group row">
+        <label for="fname" class="col-sm-2">First Name :</label>
+        <div class="col-sm-10">
+         <p>
+            <input type="text" class="form-control"  data-ref='First Name' placeholder="First Name"  data-bind="value: currentPatient.fname" data-validation='required'>
+        </p>
+
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="mname" class="col-sm-2 ">Middle Name :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control mname" data-ref='Middle Name' placeholder="Middle Name" data-bind=" value: currentPatient.mname " data-validation='required'>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Lname" class="col-sm-2">Last Name :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control lname" placeholder="last Name" data-ref='last Name' data-bind=" value: currentPatient.lname " data-validation='required'>
+        </div>
+      </div>
+      <div class="form-group row">
+          <label class="col-form-label col-sm-2">Gender :</label>
+          <div class="col-sm-10">
+            <div>
+              <input type="radio" name="gender" id="Male" value="1" data-bind="checked: currentPatient.gender"  checked>
+              <label for="Male">  Male  </label>
+            </div>
+            <div >
+              <input type="radio" name="gender" id="Female" data-bind="checked: currentPatient.gender"  value="2">
+              <label for="Female">  Female </label>
+            </div>
+          </div>
+        </div>
+      <div class="form-group row">
+        <label for="DOB" class="col-sm-2">Date Of Birth :</label>
+        <div class="col-sm-10">
+          <input class="form-control DOB" type="datetime" data-ref='Date' data-bind="value : currentPatient.DOB" data-validation='date'>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2" for="status">Status :</label>
+        <div class="col-sm-10">
+          <select class='form-control 'data-bind="options:['Snigle','Married'],value: currentPatient.status,optionsCaption: 'Choose...'"></select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 ">E-mail :</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control email" placeholder="E-mail" data-validation='email' data-bind=" value: currentPatient.email " data-ref='E-mail'>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 " for="Active"> Active :</label> 
+        <div class="col-sm-10">
+          <input type="checkbox" name="Active" value='1' data-bind="checked: currentPatient.Active" checked>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-success savebtn" data-bind="click: onSavebtnClick"><i class='glyphicon glyphicon-floppy-disk'></i> Save </button>
+          <button class='btn btn-danger navigator' data-state='Patients-list'><i class='glyphicon glyphicon-ban-circle'></i> Cancel </button>
+        </div>
+      </div>
+    </form>
+
+  </div>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+	<title>Patients System</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap JS and CSS libs-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!--Custom JS and CSS libs-->
+	<link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/sidebar.css">
+</head>
+<body>
+	<!-- sidebar start here -->
+	<div class='sidebar'>
+		<ul class="sidebar-nav">
+			<li class="sidebar-brand">
+				Patients System
+				<hr class='bordered-Top' />
+			</li>
+			<li>
+				<a  class='h4' data-state='Patients-list'>
+					<img class='img-circle iconImg' src="./images/patienticon2.png"/>    
+          Patients
+        </a>
+      </li>
+      <li>
+        <a  class='h4'  data-state='users-list'> 
+          <img class='iconImg' src="./images/usericon.png"/>    
+          Users
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- sidebar Finish here -->
+  <!-- Main Content start here -->
+  <div class='content-container container-fluid router-outlet'>   
+
+  </div>
+  <!-- Main Content Finish here -->
+  <!-- JS  libs-->
+
+  <script type="text/javascript" src="./app/utilles/knockout.js"></script>
+  <script type="text/javascript"  src="./app/patientsData.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="./app/utilles/routerEngin.js"></script>
+  <script src="./app/utilles/renderEngin.js"></script>
+  <script src="./app/data/patientservicesclass.js"></script>
+  <script src="./app/patient/patientListScreen.js"></script>
+  <script src="./app/patient/patientEditScreen.js"></script>
+  <script src="./app/user/userListScreen.js"></script>
+  <script src="./app/user/userEditScreen.js"></script>
+  <script src="./app/utilles/validationEngin.js"></script>
+  <script type="text/javascript" src="./app/main.js"></script>
+ <!-- <script data-main='./app/lab/config' src='./app/lab/requireJs.js'></script>
+  <script>
+    require(['config'],function(){ 
+    })
+  </script>-->
+</body>
+</HTML>

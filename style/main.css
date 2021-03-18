@@ -1,0 +1,25 @@
+.content-container{
+  margin-left: 230px;
+  }
+.mt-3{
+  margin-top: 30px;
+  }
+.bordered-Top{
+  border-top:0.5px groove;
+  }
+.iconImg{
+  height: 25px;
+  }
+.hided-section{
+  display: none;
+  }
+.float-right {
+  float: right!important;
+}
+.my-3{
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  }
+  

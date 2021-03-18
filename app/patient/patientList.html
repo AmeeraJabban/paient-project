@@ -1,0 +1,53 @@
+<div class="PatientslistScreen"  data-state='Patients-list'>
+    <div class=" row">
+      <div class="col-md-8">
+        <h1>
+          <img class="iconImg" src="./images/patienticon.png"/>
+          Patients list
+        </h1>
+      </div>
+      <div class="col-md-4 mt-3">
+        <button class='btn btn-primary float-right' data-bind="click: onAddbtnClick" data-state='patients-editor'><i class='glyphicon glyphicon-plus'></i> Add </button>
+      </div>
+    </div>
+    <hr class='bordered-Top'/>
+    <!--dynamic Table will be created Here -->
+   <div class='row'>
+      <div class="col-sm-12 scroll-y">
+        <table class='table table-striped table-hover table-bordered' id='Patient_data'> 
+          <thead>
+            <tr>  
+              <th class="text-center" >First Name</th>
+              <th class="text-center">Middle Name</th>
+              <th class="text-center">Last Name</th>
+              <th class="text-center" >Status</th>
+              <th class="text-center" >Active</th>
+              <th class="text-center" >E-mail</th>
+              <th class="text-center" >Date Of Birth</th>
+              <th class="text-center" >Last Checked</th>
+              <th class="text-center" >Gender</th>
+              <th class="text-center">Created By</th>
+              <th class="text-center">Created Date</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody data-bind="foreach: patients">
+              <tr>
+                <td data-bind="text : fname"></td>
+                <td data-bind="text : mname"></td>
+                <td data-bind="text : lname"></td>
+                <td data-bind="text : DOB"></td>
+                <td data-bind="text : (gender == 1 ? 'Male' : 'Female')"></td>
+                <td data-bind="text : email"></td>
+                <td data-bind="text : lastCheck"></td>
+                <td data-bind="text : status"></td>
+                <td data-bind="text : Active"></td>
+                <td data-bind="text : creationDate"></td>
+                <td data-bind="text : CreatedBy"></td>
+                <td><button class='btn btn-primary editbtn' data-bind="click: $parent.onEditbtnClick"><i class='glyphicon glyphicon-pencil'></i> Edit</button></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
